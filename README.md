@@ -23,9 +23,17 @@ To run this project locally, follow these steps:
 
 ## How It Works
 
-1. Click the "Generate Joke" button to fetch a random Chuck Norris joke.
-2. The fetched joke will be displayed on the page for your enjoyment.
-3. You can click the button again to generate a new joke.
+This project utilizes JavaScript and the Chuck Norris API to generate and display jokes. Here's an overview of the key steps:
+
+1. When the page loads or when the "Generate Joke" button is clicked, an event listener triggers the `generate` function.
+
+2. Inside the `generate` function, an XMLHttpRequest is used to make a GET request to the Chuck Norris API (`https://api.chucknorris.io/jokes/random`).
+
+3. The `onreadystatechange` event handler is used to process the response from the API. If the request is successful (status code 200), the fetched joke is displayed on the page. If there's an error, a message indicating that something went wrong is displayed.
+
+4. The joke text is inserted into the HTML using the `innerHTML` property.
+
+5. Users can repeatedly click the "Generate Joke" button to fetch new jokes.
 
 ## Contributing
 
